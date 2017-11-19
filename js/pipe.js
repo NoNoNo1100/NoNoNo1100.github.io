@@ -1,4 +1,4 @@
-x(function (fb) {
+(function (fb) {
     var Pipe = function (ctx,topImg,botImg,x) {
         this.ctx = ctx;
         this.topImg = topImg;
