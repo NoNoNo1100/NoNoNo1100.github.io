@@ -1,33 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
-    <script type="text/javascript">
-        function changeCitys() {
-            $("#所有市").empty();
-            var provsVal = $("#所有省").val();
-            if (provsVal == 1) {
-                $("#所有市").append('<option value="1">哈尔滨市</option>');
-                $("#所有市").append('<option value="2">齐齐哈尔市</option>');
-            } else if (provsVal == 2) {
-                $("#所有市").append('<option value="1">深圳市</option>');
-                $("#所有市").append('<option value="2">广州市</option>');
-            }
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        canvas{
+            border: 1px solid #ccc;
+            display: block;
+            margin: 0 auto;
         }
-
-        $(function(){
-            changeCitys();
-        });
-    </script>
+    </style>
 </head>
 <body>
-<select id="所有省" onchange="changeCitys()" >
-    <option value="1">黑龙江</option>
-    <option value="2" selected="selected">广东</option>
-</select>
-
-<select id="所有市">
-</select>
+<canvas width="800" height="600"></canvas>
+<script src="js/fb.js"></script>
+<script src="js/sky.js"></script>
+<script src="js/pipe.js"></script>
+<script src="js/land.js"></script>
+<script src="js/bird.js"></script>
+<script src="js/game.js"></script>
+<script>
+    var game = new FB.Game();
+    game.init();
+</script>
 </body>
 </html>
